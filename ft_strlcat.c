@@ -1,6 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fde-alme <fde-alme@student.42porto.co      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/17 17:27:46 by fde-alme          #+#    #+#             */
+/*   Updated: 2025/04/17 18:12:41 by fde-alme         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
@@ -10,38 +20,14 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 	src_len = ft_strlen(src);
 	dst_len = ft_strlen(dst);
-	if (dst_len >= size - 1)
+	if (size == 0 || dst_len > size - 1)
 		return (size + src_len);
 	i = 0;
-	while (i < (size - dst_len - 1))
+	while (i < (size - dst_len - 1) && src[i])
 	{
 		dst[dst_len + i] = src[i];
 		i++;
 	}
 	dst[dst_len + i] = '\0';
 	return (dst_len + src_len);
-}
-
-int	main(void)
-{
-	char	buffer[10] = "Concat";
-	char	buffer2[10] = "Concat";
-	char	buffer3[13] = "";
-	char	buffer4[13] = "";
-
-	char	str[] = " This string";
-
-	printf("My function: %lu Result: %s\n", ft_strlcat(buffer, str,
-	sizeof(buffer)), buffer);
-
-	printf("Original: %lu Result: %s\n", strlcat(buffer2, str, sizeof(buffer2)),
-	buffer2);
-
-	printf("My function: %lu Result: %s\n", ft_strlcat(buffer3, str, sizeof(buffer3)),
-	buffer3);
-
-	printf("Original: %lu Result: %s\n", strlcat(buffer4, str, sizeof(buffer4)),
-	buffer4);
-
-	return (0);
 }

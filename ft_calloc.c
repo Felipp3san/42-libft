@@ -1,0 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/15 20:37:12 by fde-alme          #+#    #+#             */
+/*   Updated: 2025/04/15 20:48:57 by fde-alme         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void	*ft_calloc(size_t nmemb, size_t size)
+{
+	void	*ptr;
+	size_t	total;
+
+	total = nmemb * size;
+	if (total == 0)
+		total = 1;
+	ptr = (void *) malloc(total);
+	if (ptr)
+		ft_memset(ptr, 0, total);
+	return (ptr);
+}

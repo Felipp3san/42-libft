@@ -9,7 +9,9 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 
 	i = 0;
 	src_len = ft_strlen(src);
-	while (i < size - 1 && i < src_len)
+	if (size == 0)
+		return (src_len);
+	while (i < size - 1 && src[i])
 	{
 		dst[i] = src[i];
 		i++;
@@ -20,14 +22,16 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 
 int	main(void)
 {
-	char	buffer[17];
-	char	buffer2[10];
-	char	buffer3[10];
+	char	buffer[10];
 	char	*src;
 	char	*buff;
 	size_t	i;
 
-	printf("Original function: %lu\n", strlcpy(buffer, src, sizeof(buffer2)));
+	src = "Copy this string";
+	buffer[0] = 'F';
+	buffer[1] = 's';
+	buffer[2] = '\0';
+	printf("Original function: %lu\n", strlcpy(buffer, src, 0));
 
 //	src = "";
 //	printf("My function: %lu\n", ft_strlcpy(buffer3, src, sizeof(buffer2)));

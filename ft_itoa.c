@@ -6,12 +6,11 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 14:31:46 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/04/18 22:16:25 by fde-alme         ###   ########.fr       */
+/*   Updated: 2025/04/18 22:34:44 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
 
 static size_t	get_size(unsigned int n)
 {
@@ -27,26 +26,6 @@ static size_t	get_size(unsigned int n)
 	}
 	return (size);
 }
-
-//static char	*rev_str(char *str)
-//{
-//	char	temp;
-//	size_t	size;
-//	size_t	i;
-//
-//	if (!str)
-//		return NULL;
-//	i = 0;
-//	size = ft_strlen(str);
-//	while (i < size / 2)
-//	{
-//		temp = str[i];
-//		str[i] = str[size - i - 1];
-//		str[size - i - 1] = temp;
-//		i++;
-//	}
-//	return (str);
-//}
 
 char	*ft_itoa(int n)
 {
@@ -76,30 +55,3 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 	return (str);
 }
-
-//int	main(void)
-//{
-//	char	*str;
-//	
-//	printf("=== Test 1 ===\n");
-//	str = ft_itoa(0);
-//	printf("Result: %s\n", str);
-//
-//	printf("=== Test 2 ===\n");
-//	str = ft_itoa(12345);
-//	printf("Result: %s\n", str);
-//
-//	printf("=== Test 3 ===\n");
-//	str = ft_itoa(-12345);
-//	printf("Result: %s\n", str);
-//
-//	printf("=== Test 4 ===\n");
-//	str = ft_itoa(2147483647);
-//	printf("Result: %s\n", str);
-//
-//	printf("=== Test 5 ===\n");
-//	str = ft_itoa(-2147483648);
-//	printf("Result: %s\n", str);
-//
-//	return (0);
-//}

@@ -6,16 +6,16 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 19:42:34 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/04/15 21:16:00 by fde-alme         ###   ########.fr       */
+/*   Updated: 2025/04/18 22:18:30 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIB_FT_H
-# define LIB_FT_H
+#ifndef LIBFT_H
+# define LIBFT_H
 
-#include <stddef.h>
-#include <stdlib.h>
-#include <unistd.h>
+# include <stddef.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 size_t	ft_strlen(const char *str);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);

@@ -6,12 +6,11 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 13:24:22 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/04/18 13:24:46 by fde-alme         ###   ########.fr       */
+/*   Updated: 2025/04/18 21:40:52 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
 
 static int	in_set(char const *set, char ch)
 {
@@ -39,7 +38,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = ft_strlen(s1);
 	while (in_set(set, s1[start]))
 		start++;
-	while (in_set(set, s1[end - 1]))
+	while (in_set(set, s1[end - 1]) && end > start)
 		end--;
 	trimm_str = (char *) malloc((end - start) + 1);
 	if (trimm_str)

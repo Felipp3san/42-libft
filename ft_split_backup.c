@@ -6,11 +6,12 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 11:39:14 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/04/18 14:03:57 by fde-alme         ###   ########.fr       */
+/*   Updated: 2025/04/18 13:49:55 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <stdio.h>
 
 static size_t	count_words(char const *s, char c)
 {
@@ -42,29 +43,75 @@ static size_t	count_words(char const *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	char	**arr;
 	size_t	i;
-	size_t	len;
-	size_t	start;
-	size_t	word_count;
+	size_t	j;
+	char	**arr;
+	int		start;
 
-	word_count = count_words(s, c);
-	arr = (char **) malloc((word_count + 1) * sizeof(char *));
+	arr = (char **) malloc((count_words(s, c) + 1) * sizeof(char *));
 	if (!arr)
 		return (arr);
 	i = 0;
-	start = 0;
-	while (i < word_count)
+	j = 0;
+	start = -1;
+	while (i <= ft_strlen(s))
 	{
-		while (s[start] == c)
-			start++;
-		len = 0;
-		while (s[start + len] != '\0' && s[start + len] != c)
-			len++;
-		arr[i] = ft_substr(s, start, len);
-		start += len;
+		if (s[i] != c && start == -1)
+			start = i;
+		if ((s[i] == c || s[i] == '\0') && start != -1)
+		{
+			arr[j] = ft_substr(s, start, i - start);
+			start = -1;
+			j++;
+		}
 		i++;
 	}
-	arr[i] = NULL;
+	arr[j] = NULL;
 	return (arr);
 }
+
+//static void	print_arr(char	**arr)
+//{
+//	printf("[");
+//	while (*arr != NULL)
+//	{
+//		printf("\"%s\"", *arr);
+//		if (*(arr + 1) != NULL)
+//			printf(",");
+//		arr++;
+//	}
+//	printf("]\n");
+//}
+//
+//int	main(void)
+//{
+//	char	**arr;
+//	char	*str;
+//	char	ch;
+//
+//	printf("=== Test 1 ===\n");
+//	str = "Split this word into multiple words";
+//	ch = 32;
+//	arr = ft_split(str, ch);
+//	print_arr(arr);
+//
+//	printf("=== Test 2 ===\n");
+//	str = "Split this word into multiple words";
+//	ch = 0;
+//	arr = ft_split(str, ch);
+//	print_arr(arr);
+//
+//	printf("=== Test 3 ===\n");
+//	str = "";
+//	ch = 32;
+//	arr = ft_split(str, ch);
+//	print_arr(arr);
+//
+//	printf("=== Test 4 ===\n");
+//	str = "Split this word into multiple words";
+//	ch = 'i';
+//	arr = ft_split(str, ch);
+//	print_arr(arr);
+//
+//	return (0);
+//}

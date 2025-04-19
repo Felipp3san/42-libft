@@ -6,7 +6,7 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 11:39:14 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/04/18 14:03:57 by fde-alme         ###   ########.fr       */
+/*   Updated: 2025/04/19 15:26:28 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,28 +40,38 @@ static size_t	count_words(char const *s, char c)
 	return (word_count);
 }
 
+void	free_all(char **arr, int size)
+{
+	while (size >= 0)
+	{
+		free(arr[size]);
+		size--;
+	}
+	free(arr);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**arr;
 	size_t	i;
 	size_t	len;
 	size_t	start;
-	size_t	word_count;
 
-	word_count = count_words(s, c);
-	arr = (char **) malloc((word_count + 1) * sizeof(char *));
+	arr = (char **) malloc((count_words(s, c) + 1) * sizeof(char *));
 	if (!arr)
-		return (arr);
+		return (NULL);
 	i = 0;
 	start = 0;
-	while (i < word_count)
+	while (i < count_words(s, c))
 	{
 		while (s[start] == c)
 			start++;
 		len = 0;
-		while (s[start + len] != '\0' && s[start + len] != c)
+		while (s[start + len] && s[start + len] != c)
 			len++;
 		arr[i] = ft_substr(s, start, len);
+		if (!arr[i])
+			return (free_all(arr, i - 1), NULL);
 		start += len;
 		i++;
 	}

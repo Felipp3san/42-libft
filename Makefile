@@ -37,7 +37,12 @@ SRC_FILES = ft_isalpha.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c
 
+BONUS_FILES = ft_lstnew.c \
+			  ft_lstadd_front.c
+
 OBJ_FILES = $(SRC_FILES:.c=.o)
+
+BONUS_OBJ_FILES = $(BONUS_FILES:.c=.o)
 
 all: $(NAME)
 
@@ -52,6 +57,9 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
+
+bonus: $(BONUS_OBJ_FILES) $(OBJ_FILES)
+	ar rcs $(NAME) $^
 
 re: fclean all
 

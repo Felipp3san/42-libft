@@ -6,7 +6,7 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 11:39:14 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/04/19 15:26:28 by fde-alme         ###   ########.fr       */
+/*   Updated: 2025/04/20 20:24:10 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static size_t	count_words(char const *s, char c)
 	return (word_count);
 }
 
-void	free_all(char **arr, int size)
+static void	free_all(char **arr, int size)
 {
 	while (size >= 0)
 	{

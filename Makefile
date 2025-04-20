@@ -40,7 +40,8 @@ SRC_FILES = ft_isalpha.c \
 BONUS_FILES = ft_lstnew.c \
 			  ft_lstadd_front.c \
 			  ft_lstsize.c \
-			  ft_lstlast.c
+			  ft_lstlast.c \
+			  ft_lstadd_back.c
 
 OBJ_FILES = $(SRC_FILES:.c=.o)
 

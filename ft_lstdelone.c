@@ -6,7 +6,7 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 20:27:20 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/04/20 12:43:01 by fde-alme         ###   ########.fr       */
+/*   Updated: 2025/04/20 19:23:00 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (!lst || !del)
 		return ;
-	if (lst->content)
-		del(lst->content);
+	del(lst->content);
 	free(lst);
 }

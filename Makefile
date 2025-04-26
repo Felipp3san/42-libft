@@ -83,9 +83,9 @@ $(BUILD_DIR)/%.o: $(SRC_DIR)/%.c | $(BUILD_DIR)
 	@echo "$(YELLOW)Compiling: $< $(DEF_COLOR)" 
 	@$(CC) $(CFLAGS) -I$(INCLUDE_DIR) -c $< -o $@
 
-$(BUILD_DIR): $(BUILD_DIR)
+$(BUILD_DIR):
 	@echo "$(YELLOW)Build dir not found. Creating...$(DEF_COLOR)" 
-	@mkdir $(BUILD_DIR)
+	@mkdir -p $(BUILD_DIR)
 	
 clean:
 	@rm -rf $(BUILD_DIR)

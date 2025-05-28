@@ -30,31 +30,27 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@$(AR) $(NAME) $(OBJS)
-	@echo "$(GREEN)libft compiled! $(DEF_COLOR)"
+	@echo -e "$(GREEN)$(subst .a,,$(NAME)) compiled! $(DEF_COLOR)"
 
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.c | $(BUILD_DIR)
-	@echo "$(YELLOW)Compiling: $< $(DEF_COLOR)" 
+	@echo -e "$(YELLOW)Compiling: $< $(DEF_COLOR)" 
 	@$(CC) $(CFLAGS) -I$(INCLUDE_DIR) -c $< -o $@
 
 $(BUILD_DIR):
-	@echo "$(YELLOW)Build dir not found. Creating...$(DEF_COLOR)" 
+	@echo -e "$(MAGENTA)Build dir not found. Creating...$(DEF_COLOR)" 
 	@mkdir -p $(BUILD_DIR)
 	@mkdir -p $(BUILD_DIR)/ft_printf
 	
 clean:
 	@rm -rf $(BUILD_DIR)
-	@echo "$(CYAN)Object files cleaned!$(DEF_COLOR)" 
+	@echo -e "$(CYAN)$(subst .a,,$(NAME)) object files cleaned!$(DEF_COLOR)" 
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "$(CYAN)libft.a cleaned!$(DEF_COLOR)" 
-
-bonus: $(BONUS_OBJS) $(OBJS)
-	@$(AR) $(NAME) $^
-	@echo "$(GREEN) libft compiled with bonus! $(DEF_COLOR)"
+	@echo -e "$(CYAN)$(NAME) cleaned!$(DEF_COLOR)" 
 
 re: fclean all
-	@echo "$(GREEN)Cleaned and rebuilt libft!$(DEF_COLOR)" 
+	@echo -e "$(GREEN)Cleaned and rebuilt!$(DEF_COLOR)" 
 
 # Phony
 .PHONY: clean fclean bonus re all

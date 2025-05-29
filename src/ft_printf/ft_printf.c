@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-size_t	ft_printnbr(int nbr);
+size_t	ft_printnbr(int nbr, int padding);
 size_t	ft_printstr(char *str);
 size_t	ft_printchar(char ch);
 size_t	ft_printptr(uintptr_t ptr);
@@ -30,7 +30,7 @@ size_t	ft_printunbr_base(unsigned int nbr, const char *base);
  * %% - percent sign
 */
 
-static int	printf_format(va_list	*va, char ch)
+static int	printf_format(va_list	*va, char ch, int width)
 {
 	const char	*base10 = "0123456789";
 	const char	*base16 = "0123456789abcdef";
@@ -39,7 +39,7 @@ static int	printf_format(va_list	*va, char ch)
 	if (ch == 'c')
 		return (ft_printchar((char)va_arg(*va, int)));
 	else if (ch == 'd' || ch == 'i')
-		return (ft_printnbr(va_arg(*va, int)));
+		return (ft_printnbr(va_arg(*va, int), width));
 	else if (ch == 'u')
 		return (ft_printunbr_base(va_arg(*va, unsigned int), base10));
 	else if (ch == 'p')
@@ -54,17 +54,46 @@ static int	printf_format(va_list	*va, char ch)
 		return (ft_printchar(ch));
 }
 
+int	get_digits(char **fstring)
+{
+	char	*width;
+	int		size;
+	int		i;
+
+	size = 0;
+	while (ft_isdigit((*fstring)[size]) || (*fstring)[size] == '-')
+		size++;
+	width = (char *) malloc(size + 1);
+	if (!width)
+		return (0);
+	i = 0;
+	while (i < size)
+	{
+		width[i] = **fstring;
+		(*fstring)++;
+		i++;
+	}
+	width[i] = '\0';
+	return (ft_atoi(width));
+}
+
 int	ft_printf(const char *fstring, ...)
 {
 	va_list	va;
 	size_t	ch_count;
+	int		padding;
 
 	ch_count = 0;
 	va_start(va, fstring);
 	while (*fstring)
 	{
 		if (*fstring == '%')
-			ch_count += printf_format(&va, *++fstring);
+		{
+			padding = 0;
+			if (ft_isdigit(*(++fstring)) || *fstring == '-')
+				padding = get_digits((char **)&fstring);
+			ch_count += printf_format(&va, *fstring, padding);
+		}
 		else
 		{
 			ft_putchar_fd(*fstring, 1);

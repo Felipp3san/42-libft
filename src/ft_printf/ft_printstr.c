@@ -12,13 +12,13 @@
 
 #include "libft.h"
 
-size_t	ft_printstr(char *str)
+size_t	ft_printstr(char *str, int fd)
 {
 	size_t	size;
 
 	if (!str)
 		str = "(null)";
-	ft_putstr_fd(str, 1);
+	ft_putstr_fd(str, fd);
 	size = ft_strlen(str);
 	return (size);
 }

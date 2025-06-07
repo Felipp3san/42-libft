@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_dprintf.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -77,7 +77,7 @@ static int	get_digits(char **fstring)
 	return (ft_atoi(width));
 }
 
-int	ft_printf(const char *fstring, ...)
+int	ft_dprintf(int fd, const char *fstring, ...)
 {
 	va_list	va;
 	size_t	ch_count;
@@ -85,18 +85,18 @@ int	ft_printf(const char *fstring, ...)
 
 	ch_count = 0;
 	va_start(va, fstring);
-	while (*fstring)
+	while (fd > 0 && *fstring)
 	{
 		if (*fstring == '%')
 		{
 			padding = 0;
 			if (ft_isdigit(*(++fstring)) || *fstring == '-')
 				padding = get_digits((char **)&fstring);
-			ch_count += printf_format(1, &va, *fstring, padding);
+			ch_count += printf_format(fd, &va, *fstring, padding);
 		}
 		else
 		{
-			ft_putchar_fd(*fstring, 1);
+			ft_putchar_fd(*fstring, fd);
 			ch_count++;
 		}
 		fstring++;

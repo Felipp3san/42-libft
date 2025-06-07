@@ -12,13 +12,13 @@
 
 #include "libft.h"
 
-static int	apply_padding(void)
+static int	apply_padding(int fd)
 {
-	ft_putchar_fd(' ', 1);
+	ft_putchar_fd(' ', fd);
 	return (1);
 }
 
-size_t	ft_printnbr(int nbr, int padding)
+size_t	ft_printnbr(int nbr, int padding, int fd)
 {
 	char	*str;
 	size_t	size;
@@ -28,14 +28,14 @@ size_t	ft_printnbr(int nbr, int padding)
 	if (padding > 0)
 	{
 		while (size < (unsigned long) padding)
-			size += apply_padding();
+			size += apply_padding(fd);
 	}
-	ft_putstr_fd(str, 1);
+	ft_putstr_fd(str, fd);
 	if (padding < 0)
 	{
 		padding = -padding;
 		while (size < (unsigned long) padding)
-			size += apply_padding();
+			size += apply_padding(fd);
 	}
 	free(str);
 	return (size);

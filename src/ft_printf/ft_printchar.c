@@ -12,8 +12,8 @@
 
 #include "libft.h"
 
-size_t	ft_printchar(char ch)
+size_t	ft_printchar(char ch, int fd)
 {
-	ft_putchar_fd(ch, 1);
+	ft_putchar_fd(ch, fd);
 	return (1);
 }

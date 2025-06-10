@@ -82,7 +82,7 @@ int	fill_word_array(char **arr, char const *s, char c)
 		arr[i] = ft_substr(s, start, len);
 		if (!arr[i])
 			return (free_all(arr, i - 1), 0);
-		start += len;
+		start += len + 1;
 		i++;
 	}
 	arr[i] = NULL;

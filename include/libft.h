@@ -19,6 +19,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdint.h>
+# include "get_next_line.h"
 
 typedef struct s_list
 {
@@ -55,6 +56,7 @@ char	**ft_split_quotes(char const *s, char c);
 char	**ft_split(char const *s, char c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s);
+char	*get_next_line(int fd);
 char	*ft_itoa(int n);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);

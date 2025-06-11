@@ -6,7 +6,7 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 19:42:34 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/05/29 17:52:10 by fde-alme         ###   ########.fr       */
+/*   Updated: 2025/06/11 20:14:07 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ char	*ft_itoa(int n);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_dprintf(int fd, const char *fstring, ...);
+int		ft_strcmp(const char *s1, const char *s2);
 int		ft_printf(const char *fstring, ...);
 int		ft_atoi(const char *nptr);
 int		ft_isalpha(int c);

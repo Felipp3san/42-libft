@@ -37,7 +37,6 @@ And by adding the following flags to the compilation of your project's sources:
 - `make all`        : Creates *libft.a* from object files.
 - `make clean`      : Removes all object files.
 - `make fclean`     : Removes all object files and *libft.a*.
-- `make bonus`      : Creates *libft.a* with bonus functions included.
 - `make re`         : Equivalent to *make fclean* followed by *make*.
 
 **Note:** Running `make` alone is equivalent to `make all`.
@@ -46,7 +45,7 @@ And by adding the following flags to the compilation of your project's sources:
 
 ## Available Functions
 
-### Characters - *char/*
+### Characters - *ft_is/*
 
 - `ft_isalpha`     : Checks for an alphabetic character.
 - `ft_isdigit`     : Checks for a digit (0 through 9).
@@ -56,14 +55,14 @@ And by adding the following flags to the compilation of your project's sources:
 - `ft_islower`     : Checks for a lowercase letter.
 - `ft_isupper`     : Checks for an uppercase letter.
 
-### Conversions - *conv/*
+### Conversions - *ft_to/*
 
 - `ft_itoa`        : Converts an integer to a string.
 - `ft_atoi`        : Converts the initial portion of the string pointed to by 'nptr' to int, ignoring leading whitespace and handling optional signs.
 - `ft_toupper`     : Converts the letter 'c' to uppercase, if possible.
 - `ft_tolower`     : Converts the letter 'c' to lowercase, if possible.
 
-### Lists - *lst/*
+### Lists - *ft_lst/*
 
 - `ft_lstnew`       : Allocates and returns a new list element. The 'content' is initialized with the given value; 'next' is set to NULL.
 - `ft_lstlast`      : Returns the last element of the list.
@@ -75,7 +74,7 @@ And by adding the following flags to the compilation of your project's sources:
 - `ft_lstiter`      : Iterates the list and applies function 'f' to the content of each element.
 - `ft_lstsize`      : Counts the number of elements in a list.
 
-### Memory - *mem/*
+### Memory - *ft_mem/*
 
 - `ft_bzero`      : Sets the first 'n' bytes of the area starting at 's' to zero (bytes containing char '\0').
 - `ft_calloc`     : Allocates memory for an array of 'nelem' elements of size 'elsize' each and returns a pointer to the allocated memory. The memory is set to zero.
@@ -86,8 +85,9 @@ And by adding the following flags to the compilation of your project's sources:
 - `ft_memchr`     : Scans the initial 'n' bytes of the memory area pointed to by 's' for the first instance of 'c'.
 - `ft_memrchr`    : Searches backwards for the first instance of 'c' in the 'n' bytes pointed to by 's'.
 - `ft_memcmp`     : Compares the first 'n' bytes of the memory areas 's1' and 's2'.
+- `ft_memdel`     : Frees a pointer and sets it to NULL.
 
-### Output - *put/*
+### Output - *ft_put/*
 
 - `ft_putchar_fd`   : Outputs the character 'c' to the given file descriptor.
 - `ft_putstr_fd`    : Outputs the string 's' to the given file descriptor.
@@ -95,23 +95,33 @@ And by adding the following flags to the compilation of your project's sources:
 - `ft_putendl_fd`   : Outputs the string 's' followed by a newline to the given file descriptor.
 - `ft_putnbr_fd`    : Outputs the integer 'n' to the given file descriptor.
 
-### Strings - *str/*
+### Strings - *ft_str/*
 
-- `ft_strchr`     : Returns a pointer to the first occurrence of the character 'c' in the string 'str'.
-- `ft_strrchr`    : Returns a pointer to the last occurrence of the character 'c' in the string 'str'.
-- `ft_strnstr`    : Locates the first occurrence of the null-terminated string 'needle' in 'haystack', searching at most 'n' characters.
-- `ft_strdup`     : Returns a pointer to a new string which is a duplicate of the string 's'.
-- `ft_substr`     : Returns a substring from 's', starting at index 'start' and of maximum size 'len'.
-- `ft_strjoin`    : Concatenates 's1' and 's2' into a new string.
-- `ft_strtrim`    : Trims characters from 'set' from the beginning and end of 's1'.
-- `ft_strmapi`    : Applies the function 'f' to each character of 's', returning a new resulting string.
-- `ft_split`      : Splits 's' into an array of strings using 'c' as the delimiter.
-- `ft_strlen`     : Calculates the length of the string 'str'.
-- `ft_strnlen`    : Calculates the length of 's', up to a maximum of 'maxlen' bytes.
-- `ft_strlcpy`    : Copies up to 'size - 1' characters from 'src' to 'dst', NUL-terminating the result.
-- `ft_strlcat`    : Appends 'src' to string 'dst' of size 'size', guaranteeing NUL-termination.
-- `ft_strncmp`    : Compares at most 'n' characters of 's1' and 's2'.
+- `ft_strchr`       : Returns a pointer to the first occurrence of the character 'c' in the string 'str'.
+- `ft_strrchr`      : Returns a pointer to the last occurrence of the character 'c' in the string 'str'.
+- `ft_strnstr`      : Locates the first occurrence of the null-terminated string 'needle' in 'haystack', searching at most 'n' characters.
+- `ft_strdup`       : Returns a pointer to a new string which is a duplicate of the string 's'.
+- `ft_substr`       : Returns a substring from 's', starting at index 'start' and of maximum size 'len'.
+- `ft_strjoin`      : Concatenates 's1' and 's2' into a new string.
+- `ft_strtrim`      : Trims characters from 'set' from the beginning and end of 's1'.
+- `ft_strmapi`      : Applies the function 'f' to each character of 's', returning a new resulting string.
+- `ft_split`        : Splits 's' into an array of strings using 'c' as the delimiter.
+- `ft_split_quotes` : Splits 's' into an array of strings using delimiters, respecting quoted substrings.
+- `ft_strlen`       : Calculates the length of the string 'str'.
+- `ft_strnlen`      : Calculates the length of 's', up to a maximum of 'maxlen' bytes.
+- `ft_strlcpy`      : Copies up to 'size - 1' characters from 'src' to 'dst', NUL-terminating the result.
+- `ft_strlcat`      : Appends 'src' to string 'dst' of size 'size', guaranteeing NUL-termination.
+- `ft_strncmp`      : Compares at most 'n' characters of 's1' and 's2'.
 
+### File Input - *ft_gnl/*
+
+- `get_next_line`   : Reads a line from the given file descriptor, returning it as a string.
+
+### Formatted Output - *ft_printf/*
+
+- `ft_printf`      : Custom implementation of printf, formatted output conversion and printing to standard output.
+- `ft_dprintf`     : Custom implementation of dprintf, formatted output conversion and printing to the given file descriptor.
+  
 ---
 
 ## Testing

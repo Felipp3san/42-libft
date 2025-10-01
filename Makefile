@@ -11,19 +11,19 @@ SRC_DIR		= src
 BUILD_DIR	= build
 
 # Colors
-DEF_COLOR = \033[0;39m
-GRAY = \033[0;90m
-RED = \033[0;91m
-GREEN = \033[0;92m
-YELLOW = \033[0;93m
-BLUE = \033[0;94m
-MAGENTA = \033[0;95m
-CYAN = \033[0;96m
-WHITE = \033[0;97m
+DEF_COLOR 	= \033[0;39m
+GRAY 		= \033[0;90m
+RED 		= \033[0;91m
+GREEN 		= \033[0;92m
+YELLOW 		= \033[0;93m
+BLUE 		= \033[0;94m
+MAGENTA 	= \033[0;95m
+CYAN 		= \033[0;96m
+WHITE 		= \033[0;97m
 
 # Files
-SRCS	:= $(shell find $(SRC_DIR) -type f -name "*.c")
-OBJS	= $(patsubst $(SRC_DIR)/%.c,$(BUILD_DIR)/%.o, $(SRCS))
+SRCS		:= $(shell find $(SRC_DIR) -type f -name "*.c")
+OBJS		:= $(patsubst $(SRC_DIR)/%.c,$(BUILD_DIR)/%.o, $(SRCS))
 
 # Rules
 all: $(NAME)
@@ -39,11 +39,11 @@ $(BUILD_DIR)/%.o: $(SRC_DIR)/%.c
 
 clean:
 	@rm -rf $(BUILD_DIR)
-	@printf "$(CYAN)$(subst .a,,$(NAME)) object files cleaned!$(DEF_COLOR)\n"
+	@printf "$(CYAN)$(subst .a,,$(NAME)) build files cleaned!$(DEF_COLOR)\n"
 
 fclean: clean
 	@rm -f $(NAME)
-	@printf "$(CYAN)$(NAME) cleaned!$(DEF_COLOR)\n"
+	@printf "$(CYAN)$(subst .a,,$(NAME)) binaries cleaned!$(DEF_COLOR)\n"
 
 re: fclean all
 	@printf "$(GREEN)Cleaned and rebuilt!$(DEF_COLOR)\n"

@@ -16,9 +16,9 @@ make
 In future projects, **libft** will be used by placing this folder inside your project's directory.\
 The `libft.a` library will be compiled at the same time as the project by adding the following rule to your Makefile:
 
-```
-lbft:
-    make -C libft/
+```make
+$(LIBFT):
+	@$(MAKE) -C $(LIBFT_DIR) $(MAKEFLAGS) all
 ```
 
 And by adding the following flags to the compilation of your project's sources:

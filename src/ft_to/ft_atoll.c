@@ -20,7 +20,7 @@ static int	ft_isspace(int c)
 		return (0);
 }
 
-long	ft_atol(const char *nptr)
+long long	ft_atoll(const char *nptr)
 {
 	long long	nbr;
 	int		sign;

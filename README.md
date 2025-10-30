@@ -1,6 +1,6 @@
 # Libft
 
-First project as a student at 42. The goal was to reimplement standard C library functions and create utility functions to be used throughout the cursus.
+**Libft** is a custom C library that reimplements essential functions from the C standard library and adds useful utility functions for string, memory, and character manipulation. It serves as a foundational toolset for future projects, promoting understanding of low-level programming and memory management.
 
 ## Features
 

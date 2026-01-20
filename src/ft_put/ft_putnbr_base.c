@@ -6,11 +6,12 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 13:10:17 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/04/25 13:10:50 by fde-alme         ###   ########.fr       */
+/*   Updated: 2026/01/20 14:42:30 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_str.h"
+#include "ft_put.h"
 
 static size_t	get_base(char	*str)
 {

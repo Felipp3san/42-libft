@@ -6,11 +6,14 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 21:35:02 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/04/25 21:35:04 by fde-alme         ###   ########.fr       */
+/*   Updated: 2026/01/20 14:38:58 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
+#include "ft_to.h"
+#include "ft_str.h"
+#include "ft_put.h"
 
 size_t	ft_printunbr_base(unsigned int nbr, const char *base, int fd)
 {

@@ -6,11 +6,13 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 20:24:49 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/04/25 21:18:59 by fde-alme         ###   ########.fr       */
+/*   Updated: 2026/01/20 14:49:46 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
+#include "ft_math.h"
+#include "ft_str.h"
 
 char	*ft_uitoa_base(unsigned int nbr, const char *base)
 {

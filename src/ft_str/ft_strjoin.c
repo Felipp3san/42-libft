@@ -6,11 +6,12 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 19:57:01 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/04/18 21:43:14 by fde-alme         ###   ########.fr       */
+/*   Updated: 2026/01/20 14:44:54 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
+#include "ft_str.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

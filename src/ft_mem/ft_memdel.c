@@ -6,11 +6,11 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 11:03:36 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/09/29 11:04:26 by fde-alme         ###   ########.fr       */
+/*   Updated: 2026/01/20 14:06:10 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 void	*ft_memdel(void *ptr)
 {

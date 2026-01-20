@@ -6,11 +6,11 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 19:00:54 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/04/19 19:03:48 by fde-alme         ###   ########.fr       */
+/*   Updated: 2026/01/20 14:54:11 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_lst.h"
 
 int	ft_lstsize(t_list *lst)
 {

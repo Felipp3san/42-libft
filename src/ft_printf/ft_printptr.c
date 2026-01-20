@@ -6,11 +6,13 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 19:37:15 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/04/25 19:40:13 by fde-alme         ###   ########.fr       */
+/*   Updated: 2026/01/20 14:38:04 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
+#include <stdint.h>
+#include "ft_put.h"
 
 size_t	ft_printstr(char *str, int fd);
 

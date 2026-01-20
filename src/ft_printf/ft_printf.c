@@ -6,17 +6,16 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 20:56:00 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/04/25 13:15:21 by fde-alme         ###   ########.fr       */
+/*   Updated: 2026/01/20 14:34:40 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t	ft_printnbr(int nbr, int padding, int fd);
-size_t	ft_printstr(char *str, int fd);
-size_t	ft_printchar(char ch, int fd);
-size_t	ft_printptr(uintptr_t ptr, int fd);
-size_t	ft_printunbr_base(unsigned int nbr, const char *base, int fd);
+#include <stdlib.h>
+#include <stdarg.h>
+#include "ft_printf_utils.h"
+#include "ft_is.h"
+#include "ft_put.h"
+#include "ft_to.h"
 
 /*
  * %c - char

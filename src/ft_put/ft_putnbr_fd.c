@@ -6,11 +6,11 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 21:36:22 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/04/15 21:15:06 by fde-alme         ###   ########.fr       */
+/*   Updated: 2026/01/20 14:42:39 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_put.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {

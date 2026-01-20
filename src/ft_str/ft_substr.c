@@ -6,11 +6,12 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 21:00:38 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/04/15 21:20:54 by fde-alme         ###   ########.fr       */
+/*   Updated: 2026/01/20 14:46:49 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
+#include "ft_str.h"
 
 static size_t	ft_strnlen(char const *s, size_t len)
 {

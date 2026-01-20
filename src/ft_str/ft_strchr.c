@@ -6,11 +6,11 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 21:01:20 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/04/15 19:47:50 by fde-alme         ###   ########.fr       */
+/*   Updated: 2026/01/20 14:44:03 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_str.h"
 
 char	*ft_strchr(const char *s, int c)
 {

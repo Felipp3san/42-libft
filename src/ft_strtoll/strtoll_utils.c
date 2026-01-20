@@ -6,11 +6,12 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/04 15:14:06 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/10/04 15:15:55 by fde-alme         ###   ########.fr       */
+/*   Updated: 2026/01/20 14:48:14 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_str.h"
+#include "ft_to.h"
 
 int	check_prefix(const char *ptr, int *base)
 {

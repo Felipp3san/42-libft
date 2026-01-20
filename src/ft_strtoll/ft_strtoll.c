@@ -6,12 +6,15 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/04 15:13:49 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/10/04 15:38:38 by fde-alme         ###   ########.fr       */
+/*   Updated: 2026/01/20 14:52:55 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 #include <limits.h>
+#include <errno.h>
+#include "ft_is.h"
+#include "ft_strtoll.h"
 
 int	check_prefix(const char *ptr, int *base);
 int	from_base(int base, char ch);

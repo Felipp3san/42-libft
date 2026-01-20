@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_printf_utils.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/10 20:57:46 by fde-alme          #+#    #+#             */
-/*   Updated: 2026/01/20 13:53:52 by fde-alme         ###   ########.fr       */
+/*   Created: 2026/01/20 14:33:13 by fde-alme          #+#    #+#             */
+/*   Updated: 2026/01/20 14:34:01 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef FT_PRINTF_UTILS_H
+# define FT_PRINTF_UTILS_H
+
 #include <stddef.h>
+#include <stdint.h>
 
-void	*ft_memchr(const void *s, int c, size_t n)
-{
-	unsigned char	*ptr;
-	unsigned char	uc;
-	size_t			i;
+size_t	ft_printnbr(int nbr, int padding, int fd);
+size_t	ft_printstr(char *str, int fd);
+size_t	ft_printchar(char ch, int fd);
+size_t	ft_printptr(uintptr_t ptr, int fd);
+size_t	ft_printunbr_base(unsigned int nbr, const char *base, int fd);
 
-	ptr = (unsigned char *) s;
-	uc = c;
-	i = 0;
-	while (i < n)
-	{
-		if (ptr[i] == uc)
-			return ((void *)(&ptr[i]));
-		i++;
-	}
-	return (NULL);
-}
+#endif

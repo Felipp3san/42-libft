@@ -6,12 +6,14 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 16:55:50 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/05/02 16:55:52 by fde-alme         ###   ########.fr       */
+/*   Updated: 2026/01/20 14:40:12 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
+#include <unistd.h>
 #include "get_next_line.h"
+#include "ft_lst.h"
 
 static int	find_newline(char *buffer, ssize_t read_bytes)
 {

@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_is.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/10 20:57:46 by fde-alme          #+#    #+#             */
-/*   Updated: 2026/01/20 13:53:52 by fde-alme         ###   ########.fr       */
+/*   Created: 2026/01/20 14:01:25 by fde-alme          #+#    #+#             */
+/*   Updated: 2026/01/20 14:02:29 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#ifndef FT_IS_H
+# define FT_IS_H
 
-void	*ft_memchr(const void *s, int c, size_t n)
-{
-	unsigned char	*ptr;
-	unsigned char	uc;
-	size_t			i;
+int	ft_isalpha(int c);
+int	ft_isdigit(int c);
+int	ft_isalnum(int c);
+int	ft_isascii(int c);
+int	ft_isspace(int c);
+int	ft_isprint(int c);
 
-	ptr = (unsigned char *) s;
-	uc = c;
-	i = 0;
-	while (i < n)
-	{
-		if (ptr[i] == uc)
-			return ((void *)(&ptr[i]));
-		i++;
-	}
-	return (NULL);
-}
+#endif

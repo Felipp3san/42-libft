@@ -6,11 +6,12 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 20:04:09 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/04/15 21:01:47 by fde-alme         ###   ########.fr       */
+/*   Updated: 2026/01/20 14:45:52 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
+#include "ft_str.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

@@ -6,11 +6,12 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 13:24:22 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/04/18 21:40:52 by fde-alme         ###   ########.fr       */
+/*   Updated: 2026/01/20 14:46:39 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
+#include "ft_str.h"
 
 static int	in_set(char const *set, char ch)
 {

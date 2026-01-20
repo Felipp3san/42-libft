@@ -6,11 +6,12 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 15:57:53 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/06/09 16:14:36 by fde-alme         ###   ########.fr       */
+/*   Updated: 2026/01/20 14:43:31 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
+#include "ft_str.h"
 
 static void	quote_check(char c, char *quote)
 {

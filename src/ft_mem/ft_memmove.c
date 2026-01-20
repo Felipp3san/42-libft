@@ -6,11 +6,11 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 21:25:41 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/04/18 21:28:19 by fde-alme         ###   ########.fr       */
+/*   Updated: 2026/01/20 14:41:16 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

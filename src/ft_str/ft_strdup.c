@@ -6,11 +6,12 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 20:50:38 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/04/15 20:50:45 by fde-alme         ###   ########.fr       */
+/*   Updated: 2026/01/20 14:44:17 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
+#include "ft_str.h"
 
 char	*ft_strdup(const char *s)
 {

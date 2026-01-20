@@ -6,11 +6,11 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 20:51:14 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/04/15 20:54:03 by fde-alme         ###   ########.fr       */
+/*   Updated: 2026/01/20 14:41:43 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
 void	ft_putchar_fd(char c, int fd)
 {

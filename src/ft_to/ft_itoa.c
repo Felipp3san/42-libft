@@ -6,11 +6,11 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 14:31:46 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/04/18 22:34:44 by fde-alme         ###   ########.fr       */
+/*   Updated: 2026/01/20 14:49:15 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 static size_t	get_size(unsigned int n)
 {

@@ -6,11 +6,11 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 21:12:17 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/04/09 20:50:31 by fde-alme         ###   ########.fr       */
+/*   Updated: 2026/01/20 14:02:45 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_is.h"
 
 int	ft_isalnum(int c)
 {

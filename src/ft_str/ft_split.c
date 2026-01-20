@@ -6,11 +6,12 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 11:39:14 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/04/20 20:24:10 by fde-alme         ###   ########.fr       */
+/*   Updated: 2026/01/20 14:43:55 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
+#include "ft_str.h"
 
 static size_t	count_words(char const *s, char c)
 {

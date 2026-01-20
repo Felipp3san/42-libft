@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base_fd.c                                :+:      :+:    :+:   */
+/*   ft_strtoll.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/25 13:10:17 by fde-alme          #+#    #+#             */
-/*   Updated: 2026/01/20 14:42:12 by fde-alme         ###   ########.fr       */
+/*   Created: 2026/01/20 14:26:52 by fde-alme          #+#    #+#             */
+/*   Updated: 2026/01/20 14:52:32 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef FT_STRTOLL_H
+# define FT_STRTOLL_H
+
 #include <stddef.h>
-#include "ft_put.h"
-#include "ft_str.h"
 
-static size_t	get_base(char *str)
+typedef struct s_strtoll
 {
-	return (ft_strlen(str));
-}
+	long long	nbr;
+	int			sign;
+	size_t		i;
+}	t_strtoll;
 
-void	ft_putnbr_base_fd(int nb, char *base, int fd)
-{
-	unsigned int	nbr;
-	size_t			base_size;
+long long	ft_strtoll(const char *nptr, char **endptr, int base);
 
-	base_size = get_base(base);
-	if (nb < 0)
-	{
-		ft_putchar_fd('-', fd);
-		nbr = -nb;
-	}
-	nbr = nb;
-	if (nbr >= base_size)
-		ft_putnbr_base((nbr / base_size), base);
-	ft_putchar_fd(base[nbr % base_size], fd);
-}
+#endif

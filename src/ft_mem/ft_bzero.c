@@ -6,11 +6,11 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 12:24:33 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/04/09 20:49:19 by fde-alme         ###   ########.fr       */
+/*   Updated: 2026/01/20 13:54:06 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 void	ft_bzero(void *s, size_t n)
 {

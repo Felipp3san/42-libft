@@ -6,7 +6,7 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 18:58:03 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/04/27 00:34:45 by fde-alme         ###   ########.fr       */
+/*   Updated: 2026/01/20 14:01:08 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,7 @@
 # ifndef MAX_FD
 #  define MAX_FD 1024
 # endif
+
+char	*get_next_line(int fd);
 
 #endif

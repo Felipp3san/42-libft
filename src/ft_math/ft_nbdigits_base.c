@@ -6,11 +6,11 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 21:32:32 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/04/25 21:32:34 by fde-alme         ###   ########.fr       */
+/*   Updated: 2026/01/20 14:40:48 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 size_t	ft_nbdigits_base(unsigned long long nbr, size_t base_len)
 {

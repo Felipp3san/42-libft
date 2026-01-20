@@ -1,31 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_math.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/10 20:57:46 by fde-alme          #+#    #+#             */
-/*   Updated: 2026/01/20 13:53:52 by fde-alme         ###   ########.fr       */
+/*   Created: 2026/01/20 14:31:37 by fde-alme          #+#    #+#             */
+/*   Updated: 2026/01/20 14:31:59 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef FT_MATH_H
+# define FT_MATH_H
+
 #include <stddef.h>
 
-void	*ft_memchr(const void *s, int c, size_t n)
-{
-	unsigned char	*ptr;
-	unsigned char	uc;
-	size_t			i;
+size_t	ft_nbdigits_base(unsigned long long nbr, size_t base_len);
 
-	ptr = (unsigned char *) s;
-	uc = c;
-	i = 0;
-	while (i < n)
-	{
-		if (ptr[i] == uc)
-			return ((void *)(&ptr[i]));
-		i++;
-	}
-	return (NULL);
-}
+#endif

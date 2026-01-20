@@ -6,11 +6,12 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 22:35:49 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/04/18 22:35:58 by fde-alme         ###   ########.fr       */
+/*   Updated: 2026/01/20 14:45:21 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
+#include "ft_str.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

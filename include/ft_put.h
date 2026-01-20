@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_put.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/10 20:57:46 by fde-alme          #+#    #+#             */
-/*   Updated: 2026/01/20 13:53:52 by fde-alme         ###   ########.fr       */
+/*   Created: 2026/01/20 14:30:36 by fde-alme          #+#    #+#             */
+/*   Updated: 2026/01/20 14:31:01 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#ifndef FT_PUT_H
+# define FT_PUT_H
 
-void	*ft_memchr(const void *s, int c, size_t n)
-{
-	unsigned char	*ptr;
-	unsigned char	uc;
-	size_t			i;
+void	ft_putnbr_base_fd(int nb, char *base, int fd);
+void	ft_putnbr_base(int nb, char *base);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putstr(char *s);
+void	ft_putnbr_fd(int n, int fd);
 
-	ptr = (unsigned char *) s;
-	uc = c;
-	i = 0;
-	while (i < n)
-	{
-		if (ptr[i] == uc)
-			return ((void *)(&ptr[i]));
-		i++;
-	}
-	return (NULL);
-}
+#endif

@@ -6,11 +6,12 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 19:52:27 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/04/19 20:18:09 by fde-alme         ###   ########.fr       */
+/*   Updated: 2026/01/20 14:53:23 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
+#include "ft_lst.h"
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {

@@ -6,11 +6,12 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 20:06:38 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/10/03 17:52:16 by fde-alme         ###   ########.fr       */
+/*   Updated: 2026/01/20 14:48:35 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
+#include "ft_is.h"
 
 int	ft_atoi(const char *nptr)
 {

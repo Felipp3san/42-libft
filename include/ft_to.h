@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_to.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/10 20:57:46 by fde-alme          #+#    #+#             */
-/*   Updated: 2026/01/20 13:53:52 by fde-alme         ###   ########.fr       */
+/*   Created: 2026/01/20 14:09:49 by fde-alme          #+#    #+#             */
+/*   Updated: 2026/01/20 14:10:44 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#ifndef FT_TO_H
+# define FT_TO_H
 
-void	*ft_memchr(const void *s, int c, size_t n)
-{
-	unsigned char	*ptr;
-	unsigned char	uc;
-	size_t			i;
+long long	ft_atoll(const char *nptr);
+int			ft_atoi(const char *nptr);
+long		ft_atol(const char *nptr);
+char		*ft_uitoa_base(unsigned int nbr, const char *base);
+char		*ft_itoa(int n);
+int			ft_toupper(int c);
+int			ft_tolower(int c);
 
-	ptr = (unsigned char *) s;
-	uc = c;
-	i = 0;
-	while (i < n)
-	{
-		if (ptr[i] == uc)
-			return ((void *)(&ptr[i]));
-		i++;
-	}
-	return (NULL);
-}
+#endif
